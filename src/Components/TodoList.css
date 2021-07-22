@@ -1,0 +1,19 @@
+.todos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+}
+input {
+  width: 15em;
+  height: 1.8em;
+}
+.addBtn {
+  width: 5em;
+  height: 2.2em;
+  background-color: black;
+  color: white;
+  border: none;
+}
