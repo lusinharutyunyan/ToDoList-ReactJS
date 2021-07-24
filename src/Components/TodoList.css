@@ -1,19 +1,7 @@
-.todos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body{
+    padding: 2em;
+    text-align: center;
 }
-h1 {
-  text-align: center;
-}
-input {
-  width: 15em;
-  height: 1.8em;
-}
-.addBtn {
-  width: 5em;
-  height: 2.2em;
-  background-color: black;
-  color: white;
-  border: none;
+ul li {
+    list-style-type: none;
 }
