@@ -23,9 +23,15 @@ export default class TodoList extends React.Component {
     list.push(item);
     this.setState({ list, item: "" });
   }
-
+  deleteItem(id) {
+    const list = [...this.state.list];
+    const newList = list.filter((item) => item.id !== id);
+    this.setState({ list: newList });
+  }
+  removeAll() {
+  this.setState({list: []})
+    }
   
-
 
   render() {
     return (
@@ -35,23 +41,37 @@ export default class TodoList extends React.Component {
           <div className='todoForm'>
             <input
               className='todoInput'
-              placeholder='Type your to do here'
+              placeholder='Type todo here'
               type='text'
               value={this.state.item}
               onChange={(e) =>
                 this.updateInput("item", e.target.value)
               }></input>
             <button
-              className='addItem'
+              className='addBtn'
               onClick={() => this.addItem()}
               disabled={!this.state.item.length}>
-              Add 
+              Add
             </button>
-            <ul>
-              {this.state.list.map((item) => {
-                return <li key={item.id}>{item.value}</li>;
-              })}
-            </ul>
+            <button className='delAllBtn' onClick={() => this.removeAll()}>
+              Remove All
+            </button>
+            <div className='lists'>
+              <ul>
+                {this.state.list.map((item) => {
+                  return (
+                    <li key={item.id}>
+                      {item.value}
+                      <button
+                        className='delItem'
+                        onClick={() => this.deleteItem(item.id)}>
+                        X
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
