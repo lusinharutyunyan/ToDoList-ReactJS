@@ -18,6 +18,7 @@ ul li {
   background-color: black;
   color: white;
   border: none;
+  margin-left: 5px;
 }
 .delAllBtn {
   height: 31px;
