@@ -28,6 +28,9 @@ ul li {
 }
 .delItem {
   margin-left: 10px;
+  background-color: black;
+  color: white;
+  border: none;
 }
 ul {
   width: 770px;
